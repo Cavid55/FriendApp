@@ -22,9 +22,9 @@ namespace FriendOrganization.UI.ViewModel
             this.friendDataService = friendDataService;
         }
 
-        public void Load()
+        public async Task LoadAsync()
         {
-            var friends = friendDataService.GetAll();
+            var friends = await friendDataService.GetAllAsync();
             Friends.Clear();
             foreach (var friend in friends)
             {

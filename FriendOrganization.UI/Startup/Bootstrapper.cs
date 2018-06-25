@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Autofac;
 using FriendOrganization.UI.Data;
 using FriendOrganization.UI.ViewModel;
+using FriendOrganizer.DataAccess;
 
 namespace FriendOrganization.UI.Startup
 {
@@ -17,6 +18,7 @@ namespace FriendOrganization.UI.Startup
             builder.RegisterType<MainWindow>().AsSelf();
             builder.RegisterType<MainViewModel>().AsSelf();
             builder.RegisterType<FriendDataService>().As<IFriendDataService>();
+            builder.RegisterType<FriendOrganizerDbContext>().AsSelf();
             return builder.Build();
         }
     }
