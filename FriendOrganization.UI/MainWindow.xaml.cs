@@ -5,7 +5,7 @@ namespace FriendOrganization.UI
 {
     public partial class MainWindow : Window
     {
-        private MainViewModel viewModel;
+        private readonly MainViewModel viewModel;
         public MainWindow(MainViewModel _viewModel)
         {
             InitializeComponent();
